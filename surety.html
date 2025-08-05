@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Surety BG System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .brand-text { color: #0052D4; }
+        .accent-text { color: #65C7F7; }
+        .brand-bg { background-color: #0052D4; }
+        .accent-bg { background-color: #65C7F7; }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .flow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            padding: 1rem;
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #9CA3AF;
+            margin: 0 1rem;
+            align-self: center;
+        }
+        @media (max-width: 767px) {
+            .flow-arrow {
+                transform: rotate(90deg);
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-800">
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold brand-text">Surety BG System</h1>
+            <p class="text-xl md:text-2xl mt-4 text-gray-600">Otomatisasi Penerbitan Jaminan Proyek yang Cepat & Akurat</p>
+        </header>
+
+        <section id="problem" class="mb-20">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Proses Manual Menghambat Bisnis Anda?</h2>
+                <p class="text-lg text-gray-600 mb-8">Penerbitan surety bond secara tradisional penuh dengan dokumen manual, risiko kesalahan, dan proses yang lambat, menghabiskan waktu dan sumber daya berharga.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="card p-8">
+                    <div class="text-5xl font-extrabold brand-text mb-4">> 8 Jam</div>
+                    <h3 class="text-xl font-semibold mb-2">Waktu Proses Manual</h3>
+                    <p class="text-gray-600">Waktu rata-rata untuk memproses satu pengajuan secara manual.</p>
+                </div>
+                <div class="card p-8">
+                    <div class="text-5xl font-extrabold brand-text mb-4">45%</div>
+                    <h3 class="text-xl font-semibold mb-2">Risiko Kesalahan Data</h3>
+                    <p class="text-gray-600">Persentase pengajuan yang memerlukan revisi karena kesalahan input data.</p>
+                </div>
+                <div class="card p-8">
+                    <div class="text-5xl font-extrabold brand-text mb-4">Tidak Terlacak</div>
+                    <h3 class="text-xl font-semibold mb-2">Status Dokumen</h3>
+                    <p class="text-gray-600">Kesulitan melacak progres dan histori setiap dokumen yang diajukan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="mb-20">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Memperkenalkan Solusi Cerdas: <span class="brand-text">Surety BG System</span></h2>
+                <p class="text-lg text-gray-600">Sebuah sistem terintegrasi yang mengotomatisasi seluruh proses penerbitan surety bond dari awal hingga akhir, mengubah jam kerja menjadi hitungan menit.</p>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="mb-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Alur Kerja yang Disederhanakan</h2>
+            <div class="card p-8">
+                <div class="flex flex-col md:flex-row justify-around items-center">
+                    <div class="flow-step">
+                        <div class="text-4xl mb-4">📄</div>
+                        <h3 class="text-xl font-semibold">1. Input Data</h3>
+                        <p class="text-gray-600 mt-2">Masukkan data transaksi dan perusahaan melalui formulir AppSheet yang intuitif.</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block">→</div>
+                    <div class="flow-arrow md:hidden">↓</div>
+                    <div class="flow-step">
+                        <div class="text-4xl mb-4">🖱️</div>
+                        <h3 class="text-xl font-semibold">2. Pilih & Generate</h3>
+                        <p class="text-gray-600 mt-2">Pilih template yang dibutuhkan dan klik tombol untuk memulai proses.</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block">→</div>
+                    <div class="flow-arrow md:hidden">↓</div>
+                    <div class="flow-step">
+                        <div class="text-4xl mb-4">🤖</div>
+                        <h3 class="text-xl font-semibold">3. Otomatisasi</h3>
+                        <p class="text-gray-600 mt-2">Sistem mengisi data, menyisipkan logo & tanda tangan secara otomatis.</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block">→</div>
+                    <div class="flow-arrow md:hidden">↓</div>
+                    <div class="flow-step">
+                        <div class="text-4xl mb-4">✅</div>
+                        <h3 class="text-xl font-semibold">4. Dokumen Final</h3>
+                        <p class="text-gray-600 mt-2">Dokumen lengkap dan akurat siap diunduh dan dibagikan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="mb-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Dampak Nyata bagi Efisiensi Anda</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="card p-8">
+                    <h3 class="text-2xl font-bold text-center mb-4">Perbandingan Waktu Proses</h3>
+                    <div class="chart-container">
+                        <canvas id="timeComparisonChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-gray-600">Transformasi proses dari berjam-jam menjadi kurang dari 15 menit.</p>
+                </div>
+                <div class="card p-8">
+                    <h3 class="text-2xl font-bold text-center mb-4">Penurunan Tingkat Kesalahan</h3>
+                    <div class="chart-container">
+                        <canvas id="errorReductionChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-gray-600">Otomatisasi mengurangi kesalahan input data hingga 98%.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="features" class="mb-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Fitur Unggulan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold mb-2">📊 Manajemen Data Terpusat</h3>
+                    <p class="text-gray-600">Semua data transaksi, perusahaan, dan dokumen tersimpan rapi dalam satu platform.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold mb-2">⚙️ Otomatisasi Dokumen</h3>
+                    <p class="text-gray-600">Script cerdas mengisi template Google Docs secara otomatis, bebas dari kesalahan manual.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold mb-2">🖼️ Penyisipan Gambar Dinamis</h3>
+                    <p class="text-gray-600">Logo dan tanda tangan digital disisipkan secara otomatis sesuai dengan data perusahaan.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold mb-2">⏱️ Penelusuran Real-time</h3>
+                    <p class="text-gray-600">Lacak status dan histori setiap dokumen yang digenerate dengan mudah melalui dashboard.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold mb-2">✨ Konsistensi Profesional</h3>
+                    <p class="text-gray-600">Setiap dokumen yang dihasilkan memiliki format, logo, dan data yang konsisten dan akurat.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold mb-2">☁️ Pengarsipan Otomatis</h3>
+                    <p class="text-gray-600">Semua dokumen final tersimpan dengan aman dan teratur di Google Drive.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center border-t-2 border-gray-300 pt-8">
+             <h2 class="text-2xl md:text-3xl font-bold brand-text">Siap Mengubah Proses Bisnis Anda?</h2>
+             <p class="mt-4 text-lg text-gray-600">Tinggalkan cara lama dan beralihlah ke solusi digital yang cerdas dan efisien.</p>
+             <div class="mt-8">
+                <p class="text-gray-700 font-semibold">[Nama Anda / Nama Perusahaan]</p>
+                <p class="text-gray-600">[Alamat Email Anda]</p>
+                <p class="text-gray-600">[Nomor Telepon Anda]</p>
+             </div>
+        </footer>
+
+    </main>
+
+    <script>
+        function wrapLabels(label) {
+            const maxLength = 16;
+            if (typeof label === 'string' && label.length > maxLength) {
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            }
+            return label;
+        }
+
+        const tooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const timeCtx = document.getElementById('timeComparisonChart').getContext('2d');
+        const timeLabels = ['Proses Manual', 'Surety BG System'].map(wrapLabels);
+        new Chart(timeCtx, {
+            type: 'bar',
+            data: {
+                labels: timeLabels,
+                datasets: [{
+                    label: 'Waktu Proses (menit)',
+                    data: [480, 15],
+                    backgroundColor: ['#FF6384', '#65C7F7'],
+                    borderColor: ['#FF6384', '#65C7F7'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Menit'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const errorCtx = document.getElementById('errorReductionChart').getContext('2d');
+        const errorLabels = ['Kesalahan Input Data', 'Template Salah', 'Tanda Tangan/Logo Salah', 'Lainnya'].map(wrapLabels);
+        new Chart(errorCtx, {
+            type: 'doughnut',
+            data: {
+                labels: errorLabels,
+                datasets: [{
+                    label: 'Distribusi Kesalahan Manual',
+                    data: [45, 25, 20, 10],
+                    backgroundColor: [
+                        '#FF6384',
+                        '#FF9F40',
+                        '#FFCD56',
+                        '#4BC0C0'
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
